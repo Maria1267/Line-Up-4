@@ -1,0 +1,111 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 5px;
+    margin: 20px auto;
+    width: fit-content;
+    background-color: rgb(221, 118, 176);
+    padding: 10px;
+    border-radius: 10px;
+}
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color:#c0f1e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-colour 0.3s;
+    border: 1px solid rgb(157, 72, 144);  /* Border pentru a face celulele vizibile */
+}
+.cell.red {
+    background-color:red;
+}
+.cell.yellow{
+    background-color: yellow;
+}
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 24px;
+    margin: 20px;
+    font-weight: bold;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  /* Stiluri pentru pagina de start */
+.start-page .container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.start-page .start-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.start-page .rules img {
+    max-width: 80%;
+}
+
+/* Stiluri pentru pagina jocului */
+.game-page .game-container {
+    /* Stiluri specifice pentru joc */
+    padding: 20px;
+    text-align: center;
+}
+
+.game-page h1 {
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+@keyframes drop {
+    0% {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .cell.red, .cell.yellow {
+    animation: drop 1s ease-out;
+  }
+  

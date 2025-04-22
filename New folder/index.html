@@ -1,0 +1,49 @@
+<body class="start-page">
+    <!-- Restul codului -->
+</body>
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Start - Jocul Meu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Line Up 4!</h1>
+        <h2>Regulile jocului:</h2>
+        <p>Este un joc foarte popular, fiindcă regulile sunt simple şi jocul oferă distracţie un timp îndelungat .Obiectivul jocului este să aşezi patru piese pe un rând pe verticală, orizontală sau diagonală.
+            <br>Fiecare jucător aşează o piesă pe rând, regula este de sus în jos, cea ce înseamnă că piesele pot fi aşezate numai pe primul rând şi imediat deasupra altor piese de pe coloană.
+            Jocul se termină dacă unul dintre următoarele condiţii sunt îndeplinite:
+            <br>-Unul dintre jucători aşează 4 sau mai multe piese pe un rând vertical,orizontal sau în diagonală. Acesta câştigă jocul.
+            <br>-Dacă toate careurile au fost ocupate de piese şi nici unul dintre jucători nu are 4 pe linie, jocul se termină cu remiză.</p>
+        </h3>
+
+        <div class="rules">
+            <img src="poza 2 line up 4.png" alt="Regulile jocului" class rules-image>
+    </div>
+
+
+
+    <input type="text" id="playerName" placeholder="Introdu numele tău">
+<button onclick="startGame()">Start joc</button>
+<script>
+    function startGame() {
+      const name = document.getElementById("playerName").value.trim();
+  
+      if (name === "") {
+        alert("Te rog să introduci un nume!");
+        return;
+      }
+  
+      // Aici trebuie să scrii numele corect al fișierului jocului!
+      window.location.href = `jocul-meu.html?player=${encodeURIComponent(name)}`;
+    }
+  </script>
+  
+
+</body>
+</html>
+
